@@ -8,15 +8,15 @@
 /* Body and Layout */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #121212;
+    color: #e1e1e1;
     line-height: 1.6;
 }
 
 /* Header */
 header {
     width: 100%;
-    background-color: #333;
+    background-color: #1f1f1f;
     padding: 20px 0;
     z-index: 100;
     margin-bottom: 30px;
@@ -47,7 +47,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #e1e1e1;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2rem;
@@ -80,10 +80,10 @@ nav ul li a:hover i,
     width: 80%;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #1f1f1f;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Heading */
@@ -91,21 +91,21 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.4rem;
-    color: #333;
+    color: #fff;
 }
 
 /* User Info */
 .user-info {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: #ecf0f1;
+    background-color: #2c3e50;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .user-info h3 {
     font-size: 1.3rem;
-    color: #2c3e50;
+    color: #ecf0f1;
 }
 
 /* Tables */
@@ -113,12 +113,12 @@ table {
     width: 100%;
     margin-bottom: 30px;
     border-collapse: collapse;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #444;
 }
 
 th, td {
@@ -127,17 +127,17 @@ th, td {
 }
 
 th {
-    background-color: #3498db;
+    background-color: #2980b9;
     color: white;
     font-size: 1.1rem;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #444;
 }
 
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #555;
 }
 
 /* Form and Buttons */
@@ -165,10 +165,12 @@ form {
 input[type="number"] {
     padding: 8px;
     margin-right: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #444;
     border-radius: 6px;
     font-size: 1.1rem;
     width: 80px;
+    background-color: #2c3e50;
+    color: #fff;
 }
 
 /* Alerts */

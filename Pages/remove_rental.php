@@ -21,9 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['rental_id'])) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $rental_id);
     if ($stmt->execute()) {
-        echo "<script>alert('Rental removed successfully!');</script>";
+        echo "<script>alert('Book return successfully!');</script>";
     } else {
-        echo "<script>alert('Error removing rental.');</script>";
+        echo "<script>alert('Error returning  Book.');</script>";
     }
 
     $stmt->close();

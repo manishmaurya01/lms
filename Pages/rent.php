@@ -55,13 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['book_id'], $_POST['re
 
         // Check if user data is retrieved
         if ($user_data) {
-            // Insert the rental into the rentals table
-            $stmt = $conn->prepare("INSERT INTO rentals (user_id, book_id, rent_price, rent_duration, rental_date) VALUES (?, ?, ?, ?, NOW())");
+            // Insert the rental into the rentals table with payment_status as 'pending'
+            $stmt = $conn->prepare("INSERT INTO rentals (user_id, book_id, rent_price, rent_duration, rental_date, payment_status) VALUES (?, ?, ?, ?, NOW(), 'pending')");
             $stmt->bind_param("iidi", $user_id, $book_id, $rent_price, $rent_duration);
 
             // Execute the query and check for success
             if ($stmt->execute()) {
-                echo "<script>alert('Book rented successfully!');</script>";
+                echo "<script>alert('Book rented successfully! Payment status is pending.');</script>";
                 echo "<script>window.location.href = 'search_books.php';</script>";
             } else {
                 echo "<script>alert('Error during rental. Please try again.');</script>";

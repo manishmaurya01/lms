@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    padding: 20px 0;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav .logo {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Hero Section with Gradient Background Animation */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(90deg, #2c3e50, #34495e, #1abc9c, #2ecc71);
+    background-size: 400% 400%;
+    animation: gradientBG 6s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 10;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* About Us Section (Dark Mode) */
+.about-section {
+    background-color: #2d2d2d;
+    color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    margin: 50px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #ff9900;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #333;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-section p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(255, 153, 0, 0.3);
+}
+
+.contact-button:hover {
+    background-color: #ff6600;
+    box-shadow: 0px 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+.contact-button i {
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* General styling for icons */
+nav ul li a i, .contact-button i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+nav ul li a:hover i, .contact-button:hover i {
+    color: #ff9900;
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}

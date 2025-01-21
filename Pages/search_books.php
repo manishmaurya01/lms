@@ -59,7 +59,7 @@ $conn->close();
         <nav>
             <div class="logo">Library Portal</div>
             <ul>
-                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.php"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="search_books.php"><i class="fas fa-book"></i> Search Books</a></li>
                 <li><a href="profilepage.php"><i class="fas fa-user"></i> Profile</a></li>
                 <?php
@@ -71,7 +71,7 @@ $conn->close();
                     <!-- User is not logged in, show Register link -->
                     <li><a href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
                 <?php endif; ?>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="contact.php"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -83,10 +83,10 @@ $conn->close();
             <button type="submit"><i class="fas fa-search"></i> Search</button>
 
             <div class="price-filter">
-            <label for="price_min">Min Price: $<span id="min-price-val"><?php echo htmlspecialchars($price_min); ?></span></label>
+            <label for="price_min">Min Price: ₹<span id="min-price-val"><?php echo htmlspecialchars($price_min); ?></span></label>
             <input type="range" name="price_min" id="price_min" min="0" max="500" step="0.01" value="<?php echo htmlspecialchars($price_min); ?>" oninput="updatePrice()">
 
-            <label for="price_max">Max Price: $<span id="max-price-val"><?php echo htmlspecialchars($price_max); ?></span></label>
+            <label for="price_max">Max Price: ₹<span id="max-price-val"><?php echo htmlspecialchars($price_max); ?></span></label>
             <input type="range" name="price_max" id="price_max" min="0" max="500" step="0.01" value="<?php echo htmlspecialchars($price_max); ?>" oninput="updatePrice()">
         </div>
 
@@ -100,12 +100,12 @@ $conn->close();
                 <h3><?php echo htmlspecialchars($book['title']); ?></h3>
                 <p><strong>Author:</strong> <?php echo htmlspecialchars($book['author']); ?></p>
                 <p><strong>Description:</strong> <?php echo htmlspecialchars($book['description']); ?></p>
-                <p><strong>Buy Price:</strong> $<?php echo htmlspecialchars(number_format($book['buying_price'], 2)); ?></p>
-                <p><strong>Rent Price:</strong> $<?php echo htmlspecialchars(number_format($book['renting_price'], 2)); ?></p>
+                <p><strong>Buy Price:</strong> ₹<?php echo htmlspecialchars(number_format($book['buying_price'], 2)); ?></p>
+                <p><strong>Rent Price:</strong> ₹<?php echo htmlspecialchars(number_format($book['renting_price'], 2)); ?></p>
                 <div class="book-actions">
                     <!-- Inside the book-actions div -->
-                    <button class="rent-button" onclick="openRentModal(<?php echo $book['id']; ?>, <?php echo $book['renting_price']; ?>)">Rent for $<?php echo htmlspecialchars(number_format($book['renting_price'], 2)); ?></button>
-                    <button class="buy-button" onclick="openModal(<?php echo $book['id']; ?>, <?php echo $book['buying_price']; ?>)">Buy for $<?php echo htmlspecialchars(number_format($book['buying_price'], 2)); ?></button>
+                    <button class="rent-button" onclick="openRentModal(<?php echo $book['id']; ?>, <?php echo $book['renting_price']; ?>)">Rent for ₹<?php echo htmlspecialchars(number_format($book['renting_price'], 2)); ?></button>
+                    <button class="buy-button" onclick="openModal(<?php echo $book['id']; ?>, <?php echo $book['buying_price']; ?>)">Buy for ₹<?php echo htmlspecialchars(number_format($book['buying_price'], 2)); ?></button>
                 </div>
             </div>
         <?php endforeach; ?>
@@ -152,7 +152,7 @@ $conn->close();
                     <input type="number" name="rent_duration" id="rent_duration" min="1" value="1" required>
 
                     <!-- Display total rent -->
-                    <p>Total Rent: $<span id="total_rent">0</span></p>
+                    <p>Total Rent: ₹<span id="total_rent">0</span></p>
 
                     <!-- Confirm button -->
                     <button type="submit">Confirm Rent</button>
