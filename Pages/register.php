@@ -33,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("ss", $email, $hashed_password);
         if ($stmt->execute()) {
             echo "<p style='color: green;'>Registration successful! Please <a href='login.php'>login</a>.</p>";
+            header("Location: login.php");
         } else {
             echo "<p style='color: red;'>Error occurred while registering. Please try again.</p>";
         }
