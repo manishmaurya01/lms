@@ -50,7 +50,7 @@ $conn->close();
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="overlay">
-            <h1>Welcome, John Doe!</h1>
+            <h1>Welcome, to te library managment system!</h1>
             <p>Browse our collection of books, borrow, and track your reading progress!</p>
         </div>
     </section>
